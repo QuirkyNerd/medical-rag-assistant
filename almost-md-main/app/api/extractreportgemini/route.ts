@@ -3,7 +3,9 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 const PROMPT = `Analyze this clinical report and extract all important medical information like patient details, test results, units, reference ranges, and give a brief summary of abnormalities.`;
 
 // Securely get API key from environment variables
-const apiKey = process.env.GOOGLE_API_KEY ?? 'AIzaSyCOivVdjE_OiiuHAEGV73qFv4lIcujKDgY';
+const apiKey = process.env.GOOGLE_API_KEY ?? 'abc    ';
+
+
 
 const genAI = apiKey ? new GoogleGenerativeAI(apiKey) : null;
 
