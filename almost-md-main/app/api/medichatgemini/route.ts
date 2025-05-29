@@ -9,13 +9,15 @@ const DEFAULT_MODEL = "models/gemini-1.5-pro-latest";
 
 // Initialize clients with fallback API keys for development
 const pinecone = new Pinecone({
-    apiKey: process.env.PINECONE_API_KEY || "pcsk_2iT7TQ_AxTpK4FN1fGXCysKevJSo7R3e8jr3jAYZH7Czh47PDyeLjWH28qnow3HPJqsvJQ",
+    apiKey: process.env.PINECONE_API_KEY || "abc   ",
+
+    
 });
 
 const google = createGoogleGenerativeAI({
     apiKey: process.env.GOOGLE_GENERATIVE_AI_API_KEY || 
             process.env.GEMINI_API_KEY || 
-            "AIzaSyDAtKRI1Q6jxgtPXi0WrfebRrTuSV-_RGU" // Fallback for testing
+            "**" // Fallback for testing
 });
 
 const model = google(DEFAULT_MODEL, {
